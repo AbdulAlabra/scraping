@@ -8,5 +8,5 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scraping";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/heroku_9hwsjvr7";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
