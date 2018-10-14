@@ -16,6 +16,7 @@ var ArticleSchema = new Schema({
   },
   image: {
     type: String,
+    required: true
   },
   summary: {
     type: String,

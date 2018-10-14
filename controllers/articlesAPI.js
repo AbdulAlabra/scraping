@@ -12,6 +12,7 @@ module.exports = function (app) {
     app.get("/news", function (req, res) {
         axios.get("https://news.google.com/?hl=en-US&gl=US&ceid=US:en").then(function (response) {
             var $ = cheerio.load(response.data);
+            var data = [];
             $("h3").each(function (i, elment) {
                 var result = {};
                 var title = $(this).text();
@@ -27,15 +28,12 @@ module.exports = function (app) {
                 result.summary = summary;
                 result.link = link;
                 result.image = image;
-
+                data.push(result);
                 Article.create(result).then(function (dataAdded) {
-                    console.log(dataAdded);
-                    
-                }).catch(function (err) {
-                    return res.json(err);
+                    console.log(dataAdded); 
                 });
             });    
+            res.render("news", {data});
         });
-        res.send("done");
     });
 }
