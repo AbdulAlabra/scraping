@@ -1,0 +1,27 @@
+<div class="container">
+    {{!--
+    <div class="row">
+        <div class="col-md-6">
+            {{#each data}}
+            <p>Title: {{title}}</p>
+            <a href={{link}}>Link</a>
+            {{/each}}
+        </div>
+
+    </div> --}}
+    <h1>Breaking News!</h1>
+    <div class="row">
+
+        {{#each data}}
+        <div class="card col-md-6" style="width: 18rem;">
+            <img class="card-img-top" src={{image}} alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+                <p id={{_id}} class="card-text">{{summary}}</p>
+                <a href={{link}} class="btn btn-primary">View Article</a>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>
