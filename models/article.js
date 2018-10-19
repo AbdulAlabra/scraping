@@ -20,6 +20,12 @@ var ArticleSchema = new Schema({
   },
   summary: {
     type: String,
+  },
+  comment: {
+    type: String,
+    commentAdded: false,
+    required: false,
+    comments: []
   }
 
 });
