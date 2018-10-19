@@ -20,14 +20,8 @@ var ArticleSchema = new Schema({
   },
   summary: {
     type: String,
-  },
-  comment: {
-    type: String,
-    commentAdded: false,
-    required: false,
-    comments: []
   }
-
+ 
 });
 
 // This creates our model from the above schema, using mongoose's model method
