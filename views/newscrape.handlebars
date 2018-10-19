@@ -1,11 +1,10 @@
 <div class="container">
-    <h1>Breaking News!</h1>
     <hr>
-    <button type="button" class="scrape btn btn-secondary btn-lg btn-block">Scrape</button>
+    <h1>Breaking News!</h1>
     <hr>
     <div class="row">
         {{#each data}}
-        <div class="card col-md-6" style="width: 18rem;">
+        <div class="card col-md-4" style="width: 18rem;">
             <img class="card-img-top" src={{image}} alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{title}}</h5>
@@ -16,17 +15,7 @@
         {{/each}}
     </div>
 
-    <hr>
-    <button type="button" class="scrape btn btn-secondary btn-lg btn-block">Scrape</button>
-    <hr>
+   
 </div>
 
 <script src="https://code.jquery.com/jquery.js"></script>
-<script>
-    $(".scrape").on("click", function () {
-        $.get("/news", function (response) {
-            
-            
-        });
-
-    });

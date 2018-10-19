@@ -5,7 +5,7 @@
     <hr>
     <div class="row">
         {{#each data}}
-        <div class="card col-md-6" style="width: 18rem;">
+        <div class="card col-md-4" style="width: 18rem;">
             <img class="card-img-top" src={{image}} alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{title}}</h5>
@@ -21,22 +21,9 @@
     <hr>
 </div>
 
-{{!-- <script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
 <script>
-    $(".scrape").on("click", function () {
-        $.get("/news", function (response) {
-            
-            var cards = $(".row").children();
-            console.log($(cards[0]).children("div").children("p").attr("id"));
-            for (var i = 0; i < response.length; i++) {
-                var title = response.title;
-                var link = response.link;
-                var image = response.image;
-                var summary = response.summary;
-
-                console.log("for loop is working");
-            }
-        });
-
+    $(".scrape").on("click", function () {            
+        location.reload();
     });
-</script> --}}
+</script>
